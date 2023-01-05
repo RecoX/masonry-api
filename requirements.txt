@@ -1,0 +1,2 @@
+pip3 install instagrapi    
+pip3 install flask    
