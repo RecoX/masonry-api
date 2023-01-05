@@ -1,10 +1,12 @@
+import os
 from flask import Flask, jsonify
 from instagrapi import Client
+
 
 app = Flask(__name__)
 
 cl = Client()
-cl.login("info@argentumonline.org", "Y4uWa38gi4PnLpV")
+cl.login(os.environ.get('EMAIL'), os.environ.get('EMAIL_PASSWORD'))
 
 @app.route('/getInstagramMediaByUsername/<username>/<quantity>', methods=['GET'])
 def get_instagram_media(username, quantity):
