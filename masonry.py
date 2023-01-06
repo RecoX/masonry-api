@@ -1,8 +1,9 @@
 import os
+from dotenv import load_dotenv
 from flask import Flask, jsonify
 from instagrapi import Client
 
-
+load_dotenv()
 app = Flask(__name__)
 
 cl = Client()
